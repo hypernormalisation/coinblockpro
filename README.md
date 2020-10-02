@@ -1,4 +1,4 @@
-# toy_exchange_server
+# coinbitexpro
 
 A toy server written in Sanic to mimic an online currency exchange, with
-a REST and websocket API.
+REST and websocket APIs.
