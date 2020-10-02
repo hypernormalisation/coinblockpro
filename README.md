@@ -1,2 +1,4 @@
 # toy_exchange_server
-A toy server to mimic an online currency exchange, with a REST and websocket API
+
+A toy server written in Sanic to mimic an online currency exchange, with
+a REST and websocket API.
