@@ -10,7 +10,7 @@ setup(
     version='0.0.1',
 
     description="A toy server written in Sanic to mimic an online currency"
-		" exchange, with a REST and websocket API.",
+                " exchange, with a REST and websocket API.",
 
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -32,7 +32,7 @@ setup(
     keywords='logging',
     packages=find_packages(exclude=['bin', 'notebooks']),
     python_requires='>=3.6',
-    install_requires=['sanic'],
+    install_requires=['sanic', 'dataset', 'websockets'],
     project_urls={
         'Source': 'https://github.com/hypernormalisation/coinblockpro',
     },
