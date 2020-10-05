@@ -32,6 +32,24 @@ will produce output like the following:
 [2020-10-05 19:19:49 +0100] [34227] [INFO] update to market ltc_dot: 2752.763 -> 2708.661
 ```
 
+## Market simulation
+
+The primary purpose of this toy server is to facilitate the development
+of algorithms to keep real-time information on an exchange's markets.
+
+As such, the information simulated is simplified to just the last price
+of a market token.
+
+The market prices are initialised randomly from a uniform distribution
+between 0 and 10000.
+
+At a random time interval described by a Gaussian (mu=3 seconds, sigma=2
+seconds) a random market is chosen and adjusted by another Gaussian
+distribution centered on its previous point with a 5% width.
+
+This crude simulation is sufficient to provide a set of evolving prices
+that must be kept track of through the REST and websocket APIs.
+
 ## Connecting to the server
 
 The server runs on the localhost.
