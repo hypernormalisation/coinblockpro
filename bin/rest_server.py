@@ -5,20 +5,14 @@ with the ws_server.py script.
 Together, these scripts provide a toy simulation of an exchange's
 last price tickers.
 """
-import dataset
 import time
-import coinblockpro
 
+import dataset
 from sanic import Sanic
 from sanic.log import logger
 from sanic.response import json
 
-
-ticker_data = {
-    'a': 1200.1,
-    'b': 400.34,
-    'c': 500.31,
-}
+import coinblockpro
 
 
 ###########################################################
@@ -65,7 +59,7 @@ async def get_single_ticker(request):
         )
     logger.debug(request_args)
     market = request_args['market'][0]
-    if market not in ticker_data:
+    if market not in coinblockpro.markets:
         return json(
             {'error': 'market code not recognised!'},
             status=400,

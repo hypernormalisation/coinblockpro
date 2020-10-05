@@ -62,7 +62,7 @@ The list of available markets can be found at:
 
 ```python
 import coinblockpro
-coinblockpro._markets
+coinblockpro.markets
 ```
 
 Some example requests are given below:

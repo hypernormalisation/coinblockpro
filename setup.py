@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='coinblockpro',
-    version='0.0.1',
+    version='0.0.2',
 
     description="A toy server written in Sanic to mimic an online currency"
                 " exchange, with a REST and websocket API.",
@@ -32,7 +32,7 @@ setup(
     keywords='logging',
     packages=find_packages(exclude=['bin', 'notebooks']),
     python_requires='>=3.6',
-    install_requires=['sanic', 'dataset', 'websockets'],
+    install_requires=['sanic', 'dataset', 'websockets', 'requests'],
     scripts=[
         'bin/run_cbp_server',
         'bin/ws_server.py',

@@ -14,9 +14,9 @@ _asset_list = [
     'usd',
 ]
 _pairs = itertools.combinations(_asset_list, 2)
-_markets = ['_'.join(t) for t in _pairs]
+markets = ['_'.join(t) for t in _pairs]
 ticker_data_conditions = {}
-for market in _markets:
+for market in markets:
     ticker_data_conditions[market] = round(random.uniform(0, 10000), 3)
 
 # Ticker database properties
