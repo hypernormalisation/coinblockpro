@@ -1,0 +1,11 @@
+#!/bin/bash
+killbg() {
+        for p in "${pids[@]}" ; do
+                kill "$p";
+        done
+}
+trap killbg EXIT
+pids=()
+ws_server.py &
+pids+=($!)
+rest_server.py

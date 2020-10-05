@@ -33,6 +33,11 @@ setup(
     packages=find_packages(exclude=['bin', 'notebooks']),
     python_requires='>=3.6',
     install_requires=['sanic', 'dataset', 'websockets'],
+    scripts=[
+        'bin/run_cbp_server',
+        'bin/ws_server.py',
+        'bin/rest_server.py',
+    ],
     project_urls={
         'Source': 'https://github.com/hypernormalisation/coinblockpro',
     },
