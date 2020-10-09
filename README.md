@@ -37,18 +37,10 @@ will produce output like the following:
 The primary purpose of this toy server is to facilitate the development
 of algorithms to keep real-time information on an exchange's markets.
 
-As such, the information simulated is simplified to just the last price
-of a market token.
-
-The market prices are initialised randomly from a uniform distribution
-between 0 and 10000.
-
-At a random time interval described by a Gaussian (mu=3 seconds, sigma=2
-seconds) a random market is chosen and adjusted by another Gaussian
-distribution centered on its previous point with a 5% width.
-
-This crude simulation is sufficient to provide a set of evolving prices
-that must be kept track of through the REST and websocket APIs.
+As such, the information simulated is reduced to a single price per
+market, initialised randomly between 0 and 10000. A single market is
+chosen randomly and fluctuated at a random time interval of the order of
+half a second.
 
 ## Connecting to the server
 
@@ -118,4 +110,7 @@ if __name__ == '__main__':
 
 ## Example client
 
-UNDER CONSTRUCTION
+Example clients to build up and keep real-time information on markets
+from the server are given in the
+[Jupyter notebook here](ticker_client.ipynb).
+

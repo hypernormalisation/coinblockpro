@@ -77,7 +77,7 @@ async def modulate_ticker_data():
     try:
         logger.info('Starting modulation coroutine.')
         while True:
-            interval = random.gauss(5, 2)
+            interval = abs(random.gauss(0.5, 1))
             await asyncio.sleep(interval)
 
             market = random.choice(list(ticker_data_conditions.keys()))
